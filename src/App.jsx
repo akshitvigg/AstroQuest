@@ -56,7 +56,7 @@ function App() {
       dist: "149.6M km",
       temp: "-88 to 58°C",
       moons: "1 (The Moon)",
-      funfacts:
+      funfact:
         "Earth is the only known planet with liquid water on its surface.",
     },
     {
