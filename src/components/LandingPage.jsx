@@ -61,6 +61,18 @@ function LandingPage() {
           }}
         />
       </div>
+      {/* Comet Image */}
+      <img
+        src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Comet.png"
+        alt="Comet"
+        width="150"
+        style={{
+          position: "absolute",
+          top: "20px",
+          right: "20px",
+          zIndex: 10, // Ensure it appears on top of other elements
+        }}
+      />
     </div>
   );
 }

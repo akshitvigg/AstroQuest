@@ -1,9 +1,8 @@
 :root {
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /* background-image: url(./assets/360_F_917405362_TgHvjHLEO0b69qivcG2eUX6L53cNxa93.jpg); */
+  background-color: black;
 }
-
 .landing-section {
   position: relative;
   height: 100vh;

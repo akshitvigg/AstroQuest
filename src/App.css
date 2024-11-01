@@ -1,19 +1,24 @@
+/* Base styles */
 .typewriter {
   font-family: "spacefont";
-  font-weight: 800px;
+  font-weight: 800;
   font-size: 20px;
   margin-left: 80px;
   letter-spacing: 0.3em;
   word-spacing: 0.3em;
 }
+
 .title {
   font-family: "spacefont";
   letter-spacing: 0.1em;
-  font-weight: 800px;
+  font-weight: 800;
   font-size: 80px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 0, 255, 0.7), 0 0 10px rgba(255, 0, 255, 0.5),
+    0 0 15px rgba(255, 0, 255, 0.3);
+  text-align: center; /* Center align the title by default */
+  padding: 0 20px; /* Add some padding on the sides */
 }
-
 @font-face {
   font-family: "spacefont";
   src: url(./assets/nasalization-rg.otf) format("opentype");
@@ -26,13 +31,14 @@
   border: none;
   cursor: pointer;
   font-family: "spacefont";
+  padding: 10px;
+  font-size: medium;
 }
 .navbtn:hover {
   background-color: #5f27cd;
   border: none;
   cursor: pointer;
-  border-radius: 10px;
-  height: 20px;
+  border-radius: 20px;
   font-family: "spacefont";
 }
 
@@ -50,7 +56,7 @@
   backdrop-filter: blur(10px);
   padding: 10px;
   width: 500px;
-  border-radius: 20px;
+  border-radius: 50px;
 }
 
 .navbar-content {
@@ -218,6 +224,17 @@
   top: 0;
   border-radius: 10px;
 }
+.button-85 {
+  padding: 1rem 2rem; /* Increased padding for easier tapping */
+  font-size: 1rem; /* Adjust font size */
+}
+
+@media (max-width: 768px) {
+  .button-85 {
+    padding: 0.5rem 1rem; /* Smaller padding on mobile */
+    font-size: 0.8rem; /* Smaller font size on mobile */
+  }
+}
 
 /* close-btn*/
 .close-btn {
@@ -298,4 +315,174 @@
 }
 .podpng {
   margin-top: 45px;
+}
+
+/* Loader.css */
+
+/* body {
+  margin: 0;
+  padding: 0;
+} */
+
+#universe {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#galaxy {
+  transform: rotateX(75deg);
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.circle,
+.circle2,
+.circle3 {
+  border-radius: 50%;
+  border: 1px solid #eee;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.5em;
+  margin-left: -0.5em;
+}
+
+.circle {
+  width: 1em;
+  height: 1em;
+  animation: spinner 1.5s infinite ease;
+  font-size: 6em;
+}
+
+.circle2 {
+  width: 1em;
+  height: 1em;
+  animation: spinner2 2s infinite ease;
+  font-size: 5em;
+}
+
+.circle3 {
+  width: 1em;
+  height: 1em;
+  animation: spinner3 2.5s infinite ease;
+  font-size: 4em;
+}
+
+.orbit {
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  animation-name: orbit;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: 8em;
+  height: 8em;
+  margin-top: -4em;
+  margin-left: -4em;
+  border-radius: 50%;
+}
+
+.pos {
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  margin-left: -1em;
+  margin-top: -1em;
+  animation-name: invert;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  left: 50%;
+  top: -1px;
+}
+
+.dot {
+  width: 0.5em;
+  height: 0.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -0.25em;
+  margin-left: -0.25em;
+  border-radius: 50%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Planet animation durations */
+.orbit,
+.pos {
+  animation-duration: 3s;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes invert {
+  0% {
+    transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg);
+  }
+  100% {
+    transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate3d(1, 0, 1, 0deg);
+  }
+  50% {
+    transform: rotate3d(1, 0, 1, 180deg);
+  }
+  100% {
+    transform: rotate3d(1, 0, 1, 360deg);
+  }
+}
+
+@keyframes spinner2 {
+  0% {
+    transform: rotate3d(0, 1, 1, 0deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 1, 180deg);
+  }
+  100% {
+    transform: rotate3d(0, 1, 1, 360deg);
+  }
+}
+
+@keyframes spinner3 {
+  0% {
+    transform: rotate3d(1, 1, 0, 0deg);
+  }
+  50% {
+    transform: rotate3d(1, 1, 0, 180deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 0, 360deg);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 32px;
+    letter-spacing: 0.03em;
+  }
+
+  .typewriter {
+    font-size: 14px;
+    margin-left: 10px;
+    letter-spacing: 0.15em;
+    word-spacing: 0.15em;
+  }
 }

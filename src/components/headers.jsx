@@ -23,7 +23,9 @@ const Headers = ({ onScrolltoHome, onScrolltoPlanets }) => {
           <Link to={"/solar-system"}>
             <button className="navbtn">Solar System</button>
           </Link>
-          <button className="navbtn">About us</button>
+          <Link to={"/about-us"}>
+            <button className="navbtn">About us</button>
+          </Link>
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "./App.css";
 import LandingPage from "./components/LandingPage";
 import Headers from "./components/headers";
@@ -20,10 +20,12 @@ import Marquee from "./components/marquee";
 import podpng from "./assets/podcast.png";
 
 import MouseFollowerCircle from "./components/mousefollower";
-
+import AboutUs from "./components/aboutus";
+import Loader from "./components/loader";
 function App() {
   const landingRef = useRef(null);
   const planetsRef = useRef(null);
+  const [loading, setLoading] = useState(true);
 
   const scrollToLanding = () => {
     landingRef.current.scrollIntoView({ behavior: "smooth" });
@@ -105,6 +107,17 @@ function App() {
     },
   ];
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); // Adjust the time as needed
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   const HomeContent = () => {
     useEffect(() => {
       const observer = new IntersectionObserver(
@@ -145,6 +158,7 @@ function App() {
           </div>
         </div>
         <Marquee />
+        <div></div>
         <div
           style={{ display: "flex", justifyContent: "center", marginTop: 100 }}
         >
@@ -180,8 +194,10 @@ function App() {
           <Routes>
             <Route path="/" element={<HomeContent />} />
             <Route path="/solar-system" element={<SolarSystem />} />
+            <Route path="/about-us" element={<AboutUs />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </BrowserRouter>
   );

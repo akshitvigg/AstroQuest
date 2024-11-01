@@ -1,35 +1,76 @@
 import React from "react";
-import { Github, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black/30 backdrop-blur-sm py-4">
-      <div
-        style={{ display: "flex" }}
-        className="flex items-center justify-center gap-6"
+    <footer
+      style={{
+        backgroundColor: "#000000",
+        color: "white",
+        padding: "15px 0",
+        textAlign: "center",
+        width: "100%",
+        position: "relative",
+        bottom: 0,
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
+      <p
+        style={{
+          margin: 0,
+          fontSize: "14px",
+          letterSpacing: "1px",
+          display: "inline-flex",
+          alignItems: "center",
+          color: "#565677",
+        }}
       >
-        <div className="flex items-center gap-2">
-          <span className="text-white text-lg">Created by Akshit</span>
-          <div className="flex items-center gap-4 ml-2">
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/80 hover:text-white transition-colors hover:scale-110 transform duration-200"
-            >
-              <Github size={22} />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/80 hover:text-white transition-colors hover:scale-110 transform duration-200"
-            >
-              <Twitter size={22} />
-            </a>
-          </div>
-        </div>
-      </div>
+        Developed in
+        <img
+          style={{ marginLeft: 10, marginRight: 10 }}
+          src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Sun.png"
+          alt="Sun"
+          width="30"
+          height="30"
+        />
+        by{" "}
+        <span
+          style={{
+            color: "white",
+            marginLeft: 10,
+            fontSize: 16,
+            fontWeight: "bold",
+            marginRight: 10,
+          }}
+        >
+          Akshit
+        </span>
+        follow me on
+        <a
+          target="_blank"
+          style={{
+            marginLeft: 10,
+            color: "white",
+            fontSize: 16,
+            marginRight: 10,
+          }}
+          href="https://github.com/akshitvigg"
+        >
+          <b>Github</b>
+        </a>
+        &
+        <a
+          target="_blank"
+          style={{
+            marginLeft: 10,
+            color: "white",
+            fontSize: 16,
+            marginRight: 10,
+          }}
+          href="https://x.com/AkshitVig4"
+        >
+          <b>X</b>
+        </a>
+      </p>
     </footer>
   );
 };
