@@ -14,12 +14,11 @@ function LandingPage() {
       ).style.transform = `translate(${x}px, ${y}px)`;
     };
 
-    // Add event listener for landing section
+
     const landingSection = document.querySelector(".landing-section");
     landingSection.addEventListener("mousemove", handleLandingMouseMove);
 
-    // Cleanup listener on component unmount
-    return () => {
+       return () => {
       landingSection.removeEventListener("mousemove", handleLandingMouseMove);
     };
   }, []);
@@ -70,7 +69,7 @@ function LandingPage() {
           position: "absolute",
           top: "20px",
           right: "20px",
-          zIndex: 10, // Ensure it appears on top of other elements
+          zIndex: 10, 
         }}
       />
     </div>
