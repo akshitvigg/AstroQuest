@@ -30,9 +30,9 @@
 }
 .planet-section {
   position: relative;
-  padding: 50px 0; /* Adjust as needed */
+  padding: 50px 0;
   color: #fff;
-  overflow: hidden; /* Ensure no overflow from pseudo-element */
+  overflow: hidden; 
 }
 
 .planet-section::before {
@@ -45,8 +45,8 @@
   /* background-image: url(./assets/planet.jpg);  */
   background-size: cover;
   background-position: center;
-  opacity: 0.7; /* Adjust for desired effect */
-  z-index: -1; /* Ensure it's behind content */
+  opacity: 0.7; 
+  z-index: -1; 
 }
 
 .title {
