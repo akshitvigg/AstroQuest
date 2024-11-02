@@ -1,9 +1,9 @@
-// planets.jsx
+
 import React, { useState } from "react";
 import Modal from "./Modal";
 
 const Planets = ({ name, image, distance, temperature, moons, funfact }) => {
-  // State to manage the modal visibility
+
   const [showModal, setShowModal] = useState(false);
 
   return (
