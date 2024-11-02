@@ -19,10 +19,10 @@ const MouseFollowerCircle = () => {
       }
     };
 
-    // Add listener to window to capture mouse movement everywhere
+ 
     window.addEventListener("mousemove", handleMouseMove);
 
-    // Cleanup
+    
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
@@ -36,12 +36,12 @@ const MouseFollowerCircle = () => {
         width: "30px",
         height: "30px",
         borderRadius: "50%",
-        backgroundColor: "rgba(173, 216, 230, 0.5)", // Soft blue
-        pointerEvents: "none", // Ensure it doesn't interfere with other elements
+        backgroundColor: "rgba(173, 216, 230, 0.5)", 
+        pointerEvents: "none", 
         zIndex: 9999,
-        border: "2px solid rgba(106, 90, 205, 0.7)", // Slate blue border
+        border: "2px solid rgba(106, 90, 205, 0.7)", 
         boxShadow: "0 0 10px 3px rgba(173,216,230,0.3)",
-        transition: "transform 0.1s ease-out", // Smooth transition
+        transition: "transform 0.1s ease-out", 
       }}
     />
   );
