@@ -1,4 +1,4 @@
-/* Base styles */
+
 .typewriter {
   font-family: "spacefont";
   font-weight: 800;
@@ -16,8 +16,8 @@
   color: white;
   text-shadow: 0 0 5px rgba(255, 0, 255, 0.7), 0 0 10px rgba(255, 0, 255, 0.5),
     0 0 15px rgba(255, 0, 255, 0.3);
-  text-align: center; /* Center align the title by default */
-  padding: 0 20px; /* Add some padding on the sides */
+  text-align: center; 
+  padding: 0 20px; 
 }
 @font-face {
   font-family: "spacefont";
@@ -126,10 +126,10 @@
 }
 
 .planet-card:hover .button-85 {
-  visibility: visible; /* Show on hover */
-  opacity: 1; /* Fully visible */
-  transition-delay: 0s; /* No delay for visible state */
-  margin-top: 10px; /* Adjust margin to your liking */
+  visibility: visible; 
+  opacity: 1; 
+  transition-delay: 0s;
+  margin-top: 10px; 
 }
 
 .img-container {
@@ -225,14 +225,14 @@
   border-radius: 10px;
 }
 .button-85 {
-  padding: 1rem 2rem; /* Increased padding for easier tapping */
-  font-size: 1rem; /* Adjust font size */
+  padding: 1rem 2rem; 
+  font-size: 1rem; 
 }
 
 @media (max-width: 768px) {
   .button-85 {
-    padding: 0.5rem 1rem; /* Smaller padding on mobile */
-    font-size: 0.8rem; /* Smaller font size on mobile */
+    padding: 0.5rem 1rem; 
+    font-size: 0.8rem; 
   }
 }
 
