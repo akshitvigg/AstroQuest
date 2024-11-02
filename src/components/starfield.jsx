@@ -7,10 +7,10 @@ const StarfieldBackground = () => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     let stars = [];
-    const numStars = 1000; // Increased star count for denser starfield
-    const maxSpeed = 0.25; // Increased max speed for faster movement
+    const numStars = 1000; 
+    const maxSpeed = 0.25; 
 
-    // Resize canvas to fit the screen
+  
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -18,7 +18,7 @@ const StarfieldBackground = () => {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    // Star class to create each star with position and speed
+  
     class Star {
       constructor() {
         this.reset();
@@ -29,7 +29,7 @@ const StarfieldBackground = () => {
         this.y = Math.random() * canvas.height - canvas.height / 2;
         this.z = Math.random() * canvas.width;
         this.size = Math.random() * 1.5 + 0.5;
-        this.speed = Math.random() * maxSpeed + 0.1; // Minimum speed adjusted for faster movement
+        this.speed = Math.random() * maxSpeed + 0.1; 
       }
 
       update() {
@@ -49,7 +49,7 @@ const StarfieldBackground = () => {
       }
     }
 
-    // Initialize stars
+    
     const initStars = () => {
       stars = [];
       for (let i = 0; i < numStars; i++) {
@@ -58,7 +58,7 @@ const StarfieldBackground = () => {
     };
     initStars();
 
-    // Animation loop
+    
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       stars.forEach((star) => {
