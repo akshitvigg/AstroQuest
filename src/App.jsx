@@ -110,7 +110,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 3000); // Adjust the time as needed
+    }, 3000); 
     return () => clearTimeout(timer);
   }, []);
 
@@ -130,7 +130,7 @@ function App() {
             }
           });
         },
-        { threshold: 0.1 } // Adjust as needed
+        { threshold: 0.1 } 
       );
 
       if (planetsRef.current) {
